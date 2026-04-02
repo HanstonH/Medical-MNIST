@@ -35,6 +35,16 @@ The project implements a "Lazy-Loading" architecture to ensure memory efficiency
     * Normalizes pixel values to a [0, 1] range.
 4.  **Performance Optimization:** The pipeline utilizes `tf.data.AUTOTUNE` for prefetching and batching to minimize CPU-to-GPU bottlenecks.
 
+### Dataset Classes and Mapping
+
+| Index | Class Name | Description |
+| :--- | :--- | :--- |
+| **0** | **AbdomenCT** | CT scans of the abdomen |
+| **1** | **BreastMRI** | MRI scans of breast tissue |
+| **2** | **CXR** | Chest X-ray images |
+| **3** | **ChestCT** | CT scans of the chest |
+| **4** | **Hand** | X-ray images of the hand |
+| **5** | **HeadCT** | CT scans of the head |
 
 
 ## Model Architecture
@@ -45,7 +55,7 @@ The model is a Sequential CNN designed to extract spatial features through incre
 * **Pooling Layers:** Max-pooling layers (2x2) to reduce spatial dimensions and increase translation invariance.
 * **Fully Connected Layers:** A dense layer with 64 units followed by an output layer using Softmax activation.
 * **Loss Function:** Sparse Categorical Crossentropy, ideal for integer-labeled multi-class tasks.
-
+  
 
 ## How to Use
 
