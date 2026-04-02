@@ -1,0 +1,5 @@
+*.zip
+/env
+/.ipynb_checkpoints
+*.joblib
+/data
